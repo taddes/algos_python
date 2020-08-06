@@ -1,4 +1,5 @@
 # Arrays
+* Excellent for structures that require addition or removal of items at the end of a given array. Still efficient, but less so for shift based additions or removals at existing indexes.
 
 ## Methods
 * **add()**
