@@ -15,7 +15,7 @@ class Queue:
             del self.queue[0]
             return first_item
         else:
-            return -1
+            return -1  
 
     def peek(self):
         if self.queue == []:
