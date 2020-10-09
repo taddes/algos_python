@@ -45,8 +45,6 @@ class BinarySearchTree:
         if self.root is not None:
             self.traverse_in_order(self.root)
 
-
-
     def get_max_value(self):
         if self.root:
             return self.get_max(self.root)
@@ -62,6 +60,22 @@ class BinarySearchTree:
             actual = actual.right_child
         
         return actual.data
+
+    def git_min_value(self):
+        if self.root:
+            return self.get_min(self.root)
+
+    def get_min(self, node):
+        if node.left_child:
+            return self.get_min(node.left_child)
+        
+        return node.data
+
+    def get_min_iter(self):
+        actual = self.root
+        while actual.left_child is not None:
+            actual = actual.left_child
+        return actual
 
 
 bst = BinarySearchTree()
