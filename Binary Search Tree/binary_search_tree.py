@@ -29,11 +29,10 @@ class BinarySearchTree:
         else:
             self.insert_node(data, self.root)
 
-    def traverse(self):
-        if self.root is not None:
-            self.traverse_in_order(self.root)
-
     def traverse_in_order(self, node):
+        """
+            Recursively visiting each subsequent node on each side.
+        """
         if node.left_child:
             self.traverse_in_order(node.left_child)
 
@@ -41,6 +40,12 @@ class BinarySearchTree:
 
         if node.right_child:
             self.traverse_in_order(node.right_child)
+
+    def traverse(self):
+        if self.root is not None:
+            self.traverse_in_order(self.root)
+
+
 
     def get_max_value(self):
         if self.root:
