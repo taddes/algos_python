@@ -37,4 +37,26 @@ def caesar(key, plaintext):
 
 
 
-caesar(2, 'abcz')
+def map_caesar(key, plaintext):
+    """
+        This solution implements .translate() and .maketrans() from the str class.  
+        This maps the characters through a translation table
+    """
+    letters = string.ascii_lowercase
+    mask = letters[key:] + letters[:key]
+    transtab = str.maketrans(letters, mask)
+    return plaintext.translate(transtab)
+
+
+def shift_n(letter, table):
+    try:
+        index = string.ascii_lowercase.index(letter)
+        return table[index]
+    except ValueError:
+        return letter
+
+def caesar_alt(message, amount):
+    amount = amount % 26
+    table = string.ascii_lowercase[amount:] + string.ascii_lowercase[:amount]
+    enc_list = [shift_n(letter, table) for letter in message]
+    return "".join(enc_list)
