@@ -1,11 +1,12 @@
 # Factorial example using head recursion
 # This stores each function call on the stack as it is head recursion.
 # Each function call must be evaluated and returned 
+# Must successively return a value to complete each function call
 
 #  n! = n * (n-1)!
 def factorial_head(n):
     # base case
-    if n == 1: 
+    if n == 0: 
         return 1
 
     # use recursion
