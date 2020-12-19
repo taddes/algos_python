@@ -19,5 +19,14 @@ def linear_srch(collection, item):
 
 print(linear_srch([2, 44, 56, 34, 5734, 5, 66, 23], 23))
 
-def recursive_linear_srch(collection, item):
-    pass
+def recursive_linear_srch(collection, item, index):
+    if index >= len(collection)
+        return -1
+    
+    if container[index] == item:
+        return index
+    
+    return recursive_linear_srch(container, item, index+1)
+
+nums = [1, 4, 6, -4, 0, 100]
+print(recursive_linear_srch(nums, 0))
