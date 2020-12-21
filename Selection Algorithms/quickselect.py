@@ -12,7 +12,7 @@ Similar to Quicksort: Instead or recursing into both sides of the array, only on
 dealing with quickselect. Partition followed by selection.
 1) Choose a pivot at random (in the range [first_index, last_index]).
 2) Partition the array based on the pivot value.
-3) Intead of recursion into both sides, only one side (fewer recursive calls over quicksort).
+3) Instead of recursion into both sides, only one side (fewer recursive calls over quicksort).
 """
 import random
 
@@ -33,9 +33,9 @@ class Quickselect:
         for i in range(first_index, last_index):
             # < or > here determines whether checking for min or max
             # < for less, > for max
-            if self.nums[i] > self.nums[last_index]:
+            if self.nums[i] < self.nums[last_index]:
                 self.swap(i, first_index)
-                first_index += 1
+                self.first_index += 1
             
             self.swap(first_index, last_index)
             # Index of the pivot
