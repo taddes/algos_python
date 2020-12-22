@@ -39,13 +39,23 @@ def filter_duplicates_4(array):
     print(filtered)
     return filtered
 
-def filter_duplicates_5:
+def filter_duplicates_5(array):
     # Ordered Dict method
     from collections import OrderedDict
-
     filtered = list(OrderedDict.fromkeys(array))
     print(filtered)
     return filtered
+
+def filter_duplicates_6(nums):
+    # Absolute Value filtering
+    filtered = []
+    for num in nums:
+        if nums[abs(num)] >= 0:
+            nums[abs(num)] = -nums[abs(num)]
+            filtered.append(nums[abs(num)])
+        else:
+            print(f'Repetition found {abs(num)}')
+
 
 if __name__ == "__main__":
     array = [1, 7, 9, 8, 4, 7, 5,  3, 4, 7, 4, 3, 9, 12, 5]
@@ -54,3 +64,4 @@ if __name__ == "__main__":
     filter_duplicates_3(array)
     filter_duplicates_4(array)
     filter_duplicates_5(array)
+    filter_duplicates_6(array)
