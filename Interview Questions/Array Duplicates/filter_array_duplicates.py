@@ -39,7 +39,13 @@ def filter_duplicates_4(array):
     print(filtered)
     return filtered
 
+def filter_duplicates_5:
+    # Ordered Dict method
+    from collections import OrderedDict
 
+    filtered = list(OrderedDict.fromkeys(array))
+    print(filtered)
+    return filtered
 
 if __name__ == "__main__":
     array = [1, 7, 9, 8, 4, 7, 5,  3, 4, 7, 4, 3, 9, 12, 5]
@@ -47,3 +53,4 @@ if __name__ == "__main__":
     filter_duplicates_2(array)
     filter_duplicates_3(array)
     filter_duplicates_4(array)
+    filter_duplicates_5(array)
