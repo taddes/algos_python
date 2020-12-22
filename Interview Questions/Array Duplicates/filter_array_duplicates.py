@@ -13,8 +13,37 @@ as the key. Not an in-place algorithm however and requires additional memmory.
 """
 
 def filter_duplicates(array):
-    pass
+    # Simplest of all, cast to a set and then back to a list
+    print(list(set(array)))
+    return list(set(array))
+
+def filter_duplicates_2(array):
+    # Brute Force method. 
+    filtered = []
+    for item in array:
+        if item not in filtered:
+            filtered.append(item)
+    print(filtered)
+    return filtered
+
+def filter_duplicates_3(array):
+    # List Comprehension method. 
+    filtered = []
+    [filtered.append(item) for item in array if item not in filtered]
+    print(filtered)
+    return filtered
+
+def filter_duplicates_4(array):
+    # List Comprehension with enumerate method. Looks for already occuring elements
+    filtered = [i for n, i in enumerate(array) if i not in array[:n]]
+    print(filtered)
+    return filtered
 
 
 
-array = [1, 7, 9, 8, 4, 7, 3, 4, 7]
+if __name__ == "__main__":
+    array = [1, 7, 9, 8, 4, 7, 5,  3, 4, 7, 4, 3, 9, 12, 5]
+    filter_duplicates(array)
+    filter_duplicates_2(array)
+    filter_duplicates_3(array)
+    filter_duplicates_4(array)
