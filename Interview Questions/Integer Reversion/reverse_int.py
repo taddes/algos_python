@@ -28,6 +28,7 @@ def rev_int3(number):
 
 def rev_int4(number):
     # Using modulus and the remainder by dividing by 10
+    # Most mathematically sound, as you don't depend on casting to strings
     reversed = 0
     remainder = 0
     while number > 0:
