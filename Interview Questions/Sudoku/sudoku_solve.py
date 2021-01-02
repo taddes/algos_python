@@ -11,6 +11,8 @@
     Some puzzles will not be solvable. In that case, return the string
     "Unsolvable".
 
+    https://realpython.com/python-practice-problems/#python-practice-problem-1-sum-of-a-range-of-integers
+
     The general SDM format is described here:
 
         http://www.sudocue.net/fileformats.php
