@@ -35,8 +35,18 @@ def is_anagram_2(word_a, word_b):
     print(True)
     return True
 
+def is_anagram_3(word_a, word_b):
+    if sorted(word_a) == sorted(word_b):
+        print(sorted(word_a))
+        print(sorted(word_b))
+        print(str(True))
+        return True
+    else:
+        print(str(False))
+        return False
+
 
 if __name__ == "__main__":
     
-    is_anagram('restful', 'fluster')
-    is_anagram_2('restful', 'fluster')
+    is_anagram_3('restful', 'fluster')
+    # is_anagram_2('restful', 'fluster')
